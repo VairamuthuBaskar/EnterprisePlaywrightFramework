@@ -48,4 +48,4 @@ Playwright Acronyms:
 			NPM					The Mechanic			Part of Node.js			Manages the project's dependencies
 			node_modules		The Parts Box			npm install				Stores all the required external libraries
 			
-* 
+* Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code.

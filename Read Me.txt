@@ -74,6 +74,28 @@
 4. Page Object Chaining:  Creating instance of the next page(Home Page) in the current page(Login page) and returning that page is called the Page Object Chaining.
 								Ex:  const homePage = new HomePage(this.page);
 									 return homePage;
+									 
+5. Creating Git Repository: (Video No: 6 --> A good video to understand git basic operations including git clone)
+			1. git init	--> intializing the Git local repository
+			2. Login to git UI and create(+) a new repostory	
+			3. In the local git terminal run the command to establish the connection between local and remote repository
+					git remote add origin https://github.com/MukunthanMJ/enterprise-playwright-automation-framework.git --> Here origin is the name assigned to the remote repository
+			4. git add .  --> adding all the files to the staging area
+			5. git commit -m "Initial commit"  	--> command to save the files in your local system
+			6. git branch -M main	--> command to rename the current branch to main.
+			7. git push -u origin main		--> Push new main branch to remote
+			8. git push 		--> Uploading the files to the remote repository
+
+6. Handling Multiple Environment (Multi Environment Management - dotEnv File): (Video No: 7)
+			* Insatall dotEnv using the command -->		npm install dotenv --save
+			* Check the video for setting the environment variable so that the environment value can be passed from the command line itself while executing
+			
+7. Encryption of Credentials (CryptoJs): (Video No: 8)
+			* Run the below two commands crypto-js
+					npm install crypto-js
+					npm install --save-dev @types/crypto-js
+			* By passing or setting the SALT environment variable, the content of the environment file is encrypted and by using the same it is decrypted.
+			* By this way the login credentials are encrypted and decrypted and thereby the security testing is performed.
 
 * Node JS is the run time environment 
 * ESLint plugin is a popular open-source static code analysis tool for identifying and fixing common errors in JavaScript code.

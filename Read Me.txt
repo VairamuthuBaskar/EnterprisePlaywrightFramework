@@ -1,0 +1,81 @@
+* This Playwright Framework Folder was created on 15-Nov-2025
+
+* The objective is to design a Playwright from the scratch using YouTube Videos
+
+	* https://www.youtube.com/watch?v=zOq22Lij5po&list=PLrdJJVHfLoxUOuZt9As22ECOZky-mCyP-&index=1
+	* https://www.youtube.com/watch?v=rAec3mZFhF0
+	
+* GitHub link			https://github.com/MukunthanML/enterprise-playwright-automation-framework	
+	
+1. Software To Be Installed:
+------------------------------
+	* Node JS
+		- Download and install the latest version from https://nodejs.org/en/download
+		- After installing you will get the Run Time Environment.  How to confirm --> Goto command prompt and type node it will display the node version
+	* Visual Studion Code
+		- Download and install the latest version from code.visualstudio.com
+	* Playwright Module
+		- This can be installed inside the VSCode itself
+		- Goto https://playwright.dev/docs/intro
+			1. Goto VSCode and create a folder(Project/Framework folder)
+			2. Open that folder
+			3. Goto the terminal and install the Playwright by using the below command,
+					npm init playwright@latest
+						- Press 'Y' to continue with TypeScript
+						- Press 'Y' to "Where to put end-to-end tests?"
+						- Press 'N' to "Add a GitHub Actions work-flow"
+						- Press 'Y' to "Install Playwright browsers"
+	* ES Lint
+		- This can be installed inside the VSCode itself
+		- Goto the Extension and search for "ESLint"
+					- Install the plugins from the Microsoft.com and not anything else.
+				
+	* Playwright Runner Extension
+		- This can be installed inside the VSCode itself
+		- Goto the Extension and search for "Playwright"
+					- Install the plugin "Playwright Test for VSCode" from Microsoft.com
+	* Git
+		- Download from https://git-scm.com/install/windows
+		
+
+
+2. Organizing the Project Structure and Install Browser Engines:
+-----------------------------------------------------------------
+	* Creating the folders
+			- Copy & Paste all commands below into the Terminal in one shot/go
+					mkdir -p src/tests
+					mkdir -p src/pages
+					mkdir -p src/utils
+					mkdir -p src/config
+					mkdir -p src/api
+					mkdir -p src/reporting
+					mkdir -p src/logging
+					mkdir -p src/data
+
+
+	* playwright.config.ts --> is the file to configure the Playwright
+							- testDir: './src/tests'
+									--> tells the framework where to find the test cases.  Here " . " means current folder.
+	* Installing Browser Engines:
+						Place to install the browser engines
+							- Browser engines location C:\Users\<username>\AppData\Local\ms-playwright
+							- Browser engines location C:\Users\91809\AppData\Local\ms-playwright
+							https://chat.openai.com/share/16ccd5615-1b45-4e84-a7bc-ef4169f8f661
+						The browser engines should already exist since you have installed Playwright.  If it not there in the above location, run the below command in the terminal to download.
+							npx playwright install
+							
+						* ffmpeg is needed for Playwright Video recording
+						
+3. Creating Requirement.md file and Choosing AUT:
+			* Creating Requirement.md file - create requirements.md file in the project root folder for documentation
+			* Choosing Application Under Test - developer.salesforce.com/signup
+												- while signup choose either 'Developer' or 'Administrator' in the "Role" Dropdown.
+												
+4. Page Object Chaining:  Creating instance of the next page(Home Page) in the current page(Login page) and returning that page is called the Page Object Chaining.
+								Ex:  const homePage = new HomePage(this.page);
+									 return homePage;
+
+* Node JS is the run time environment 
+* ESLint plugin is a popular open-source static code analysis tool for identifying and fixing common errors in JavaScript code.
+  It helps developer adhere to coding standards and maintain a consistent code style across projects. This plugin will give you "Run As" UI option
+* Playwright Test for VSCode is a plugin.  This will be like a runner.  It will helps us to do the thing faster rather than typing in the terminal.

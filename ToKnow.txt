@@ -1,0 +1,51 @@
+Playwright Acronyms:
+--------------------
+
+* node_modules - Node_Modules folder is automatically generated directory in any Node.js project.
+				- Created the first time you run a command like npm install, npm init, or npm init playwright@latest inside your project folder.
+				- It contains all the external packages and dependencies that your project needs to run.
+				- Size: It can become very large, containing hundreds or thousands of sub-folders, even for a small project.
+				- Regenerate: If you delete the node_modules folder, you can always recreate it perfectly by simply running the command:  npm install
+				- This command reads the list of required packages from your package-lock.json and package.json files and downloads them all again.
+				- Don't Commit: You should never commit the node_modules folder to your Git repository (which is why your .gitignore file is there).
+				- In summary, the node_modules folder is where the engine of your Playwright framework lives—it holds all the code written by others that allows your tests to function.
+* Node JS is the run time environment 
+* ESLint plugin is a popular open-source static code analysis tool for identifying and fixing common errors in JavaScript code.
+  It helps developer adhere to coding standards and maintain a consistent code style across projects. This plugin will give you "Run As" UI option
+* Playwright Test for VSCode is a plugin.  This will be like a runner.  It will helps us to do the thing faster rather than typing in the terminal.
+* playwright.config.ts --> is the file to configure the Playwright
+							- testDir: './src/tests'
+									--> tells the framework where to find the test cases.  Here " . " means current folder.
+									
+* Browser vs Browser Engine - ?
+							- Playwright uses Browser Engines and not browser or browser executables
+							- Brower will have Browser Engine whereas Browser Engine has two parts 1. Rendering Engine 2. JS Engine
+							- The Browser Engine is like the engine of a car—it does the heavy lifting of processing fuel (code) and making the car move (rendering the page).
+							- The Browser is the entire car—it includes the engine, the dashboard, the steering wheel, the seats, and all the features a driver (user) interacts with.
+							
+							
+* ffmpeg is needed for Playwright Video recording
+* .md file is a Mark down file serves as the project's front page or instruction manual.  The test runner ignore this file for test exeuction.
+  This is the documentation for the framework users.
+*   Node.js (The Engine): What it is: Node.js is the JavaScript runtime environment. It allows you to run JavaScript code outside of a web browser (like on your machine's operating system or a server).
+						Primary Function: It acts as the engine that executes the JavaScript code in your test files, your Playwright framework files, and any other files written in your project.
+						Creation: It's installed directly onto your computer using an installer.
+
+* NPM (The Tool): What it is: Node Package Manager. It is the command-line tool (npm) that comes bundled with Node.js.
+				  Primary Function: It's the management tool used to install, update, and manage all the software packages (libraries) your project needs.
+									Example: When you run npm init playwright@latest or npm install, you are using NPM.
+				  The Blueprint: NPM relies on the package.json file to know which packages (like Playwright, TypeScript, etc.) to install and which version to use.
+				  
+* node_modules (The Storage): What it is: A specific directory created inside your project folder (Enterprise-PlaywrightFramework).
+							  Primary Function: It's the storage location where NPM downloads and places all the external packages and their dependencies listed in your package.json. It holds the actual code files for Playwright, TypeScript, etc.
+							  Creation: It is automatically generated and populated after you run an npm install command.
+							  
+			Component	Analogy					Created By			Role
+			Node.js		The Car EngineSystem 	InstallerExecutes all the codeNPMThe MechanicPart of Node.jsManages the project's dependenciesnode_modulesThe Parts Boxnpm installStores all the required external libraries
+			
+			Component			Analogy					Created By				Role
+			Node.js				The Car Engine			System Installer		Executes all the code
+			NPM					The Mechanic			Part of Node.js			Manages the project's dependencies
+			node_modules		The Parts Box			npm install				Stores all the required external libraries
+			
+* 
